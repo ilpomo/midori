@@ -3,13 +3,11 @@
 
 # midori: a simple trading system
 
-> Programming is science dressed up as art because most of us don’t understand the physics of software and it’s rarely, 
-> if ever, taught. The physics of software is not algorithms, data structures, languages and abstractions. These are 
-> just tools we make, use, throw away. The real physics of software is the physics of people–specifically, our 
-> limitations when it comes to complexity, and our desire to work together to solve large problems in pieces. This is 
-> the science of programming: make building blocks that people can understand and use easily, and people will work 
-> together to solve the very largest problems.
->   
+> Code has to run like the human brain, trillions of individual neurons firing off messages to each other, a massively 
+> parallel network with no central control, no single point of failure, yet able to solve immensely difficult problems. 
+> And it’s no accident that the future of code looks like the human brain, because the endpoints of every network are, 
+> at some level, human brains.
+>  
 > Pieter Hintjens
 
 Midori is a trading system that allows you to connect to your favourite exchanges to download both historical intraday 
@@ -20,8 +18,8 @@ it in the most simple, essential and effective way.
 
 ### Integrated Data Acquisition Pipeline
 
-Connect to your favourite exchanges and download both **historical intraday** (trades, OHLCV 1m+) and **real-time** (
-orderbook L1-L2<sub>-L3</sub>) data.
+Connect to your favourite exchanges and download both **historical intraday** (trades, OHLCV 1m+) and **real-time** 
+(orderbook L1-L2<sub>-L3</sub>) data.
 
 ### Trading Strategy Builder
 
@@ -121,7 +119,7 @@ To get started with Midori, follow these steps:
 
 The project requires the following dependencies, specified in the `requirements.txt` file:
 
-- **Polars**: a fast DataFrame library for Rust and Python.
+- **Polars**: dataframes powered by a multithreaded, vectorized query engine, written in Rust.
 - **PyZMQ**: Python bindings for ZeroMQ, a high-performance asynchronous messaging library.
 - **python-telegram-bot**: a library to build Telegram bots.
 
