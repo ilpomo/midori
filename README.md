@@ -1,6 +1,13 @@
 ![Header image of the midori's project repository. Photo by <a href="https://unsplash.com/it/@resourcedatabase?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Resource Database</a> su <a href="https://unsplash.com/it/foto/un-primo-piano-di-un-oggetto-bianco-e-nero-k_jj6N5fU-8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   ](docs/header.jpg)
 
+![Release](https://img.shields.io/github/v/release/ilpomo/midori?color=70e000)
+![Tag](https://img.shields.io/github/v/tag/ilpomo/midori?color=70e000)
+![Lines of code](https://img.shields.io/tokei/lines/github/ilpomo/midori?color=70e000)
+![Repo size](https://img.shields.io/github/repo-size/ilpomo/midori?color=70e000)
+![Downloads](https://img.shields.io/github/downloads/ilpomo/midori/total?color=color%3D70e000)
+![License](https://img.shields.io/github/license/ilpomo/midori?color=70e000)
+
 # midori: a simple trading system
 
 > Code has to run like the human brain, trillions of individual neurons firing off messages to each other, a massively 
