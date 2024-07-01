@@ -1,32 +1,20 @@
-![Header image of the midori's project repository. Photo by <a href="https://unsplash.com/it/@resourcedatabase?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Resource Database</a> su <a href="https://unsplash.com/it/foto/un-primo-piano-di-un-oggetto-bianco-e-nero-k_jj6N5fU-8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  ](docs/header.jpg)
+![`open-trading` header image.](docs/header.jpg)
 
-![Release](https://img.shields.io/github/v/release/ilpomo/midori?color=70e000)
-![Tag](https://img.shields.io/github/v/tag/ilpomo/midori?color=70e000)
-![Lines of code](https://img.shields.io/tokei/lines/github/ilpomo/midori?color=70e000)
-![Repo size](https://img.shields.io/github/repo-size/ilpomo/midori?color=70e000)
-![Downloads](https://img.shields.io/github/downloads/ilpomo/midori/total?color=color%3D70e000)
-![License](https://img.shields.io/github/license/ilpomo/midori?color=70e000)
+![Repo size](https://img.shields.io/github/repo-size/ilpomo/open-trading?color=70e000)
+![License](https://img.shields.io/github/license/ilpomo/open-trading?color=70e000)
 
-# midori: a simple trading system
+# open-trading: a simple trading system
 
-> Code has to run like the human brain, trillions of individual neurons firing off messages to each other, a massively 
-> parallel network with no central control, no single point of failure, yet able to solve immensely difficult problems. 
-> And it’s no accident that the future of code looks like the human brain, because the endpoints of every network are, 
-> at some level, human brains.
->  
-> Pieter Hintjens
-
-Midori is a trading system that allows you to connect to your favourite exchanges to download both historical intraday 
-and real-time data; it lets you also create custom trading strategies, backtest them and run them live. It tries to do 
-it in the most simple, essential and effective way.
+`open-trading` is a trading system that allows you to connect to your favourite exchanges to download both historical 
+intraday and real-time data; it lets you also create custom trading strategies, backtest them and run them live. It 
+tries to do it in the most simple, essential and effective way.
 
 ## Features
 
 ### Integrated Data Acquisition Pipeline
 
 Connect to your favourite exchanges and download both **historical intraday** (trades, OHLCV 1m+) and **real-time** 
-(orderbook L1-L2<sub>-L3</sub>) data.
+(orderbook, L1-L2) data.
 
 ### Trading Strategy Builder
 
@@ -66,14 +54,15 @@ control interface:
 
 ## Design
 
-- Designed over [the actor model](https://en.wikipedia.org/wiki/Actor_model)
-  - Multiprocessing
-  - Multithreading
+- Designed over [the actor model](https://en.wikipedia.org/wiki/Actor_model) through [open-core lib](https://github.com/ilpomo/open-core)
+  - Parallelism through multi-processing for CPU bound tasks
+  - Concurrency based on multi-threading for I/O bound tasks
+  - Concurrency based on Asyncio for network-related tasks
   - [ZeroMQ](https://github.com/zeromq/pyzmq) asynchronous PUB/SUB IPC/INPROC sockets
-- Custom database-like class based [Polars](https://github.com/pola-rs/polars/)
+- Custom database-like class based on [Polars](https://github.com/pola-rs/polars/)
   - Flat files in Apache Parquet format
   - No need to learn SQL
-  - Query data using built-in client's class methods
+  - Query data using built-in methods
 - Single user
 - Multi-exchange
 - Multi-asset
@@ -82,51 +71,16 @@ control interface:
 
 ## Installation
 
-To get started with Midori, follow these steps:
-
-1. **Clone this repository**:
-
-   ```sh
-   git clone https://github.com/ilpomo/midori.git
-   cd midori
-   ```
-
-2. **Create a new Virtual Environment**:
-
-   ```sh
-   python -m venv venv
-   ```
-
-3. **Activate the Virtual Environment**:
-
-   - On Windows:
-
-       ```sh
-       .\venv\Scripts\activate
-       ```
-
-   - On macOS and Linux:
-
-       ```sh
-       source venv/bin/activate
-       ```
-
-4. **Install Dependencies**:
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-5. **Run the Project**:
-
-   - Navigate to the `init.py` file in your code editor.
-   - Right-click the `init.py` file and select 'Run'.
+```sh
+pip install open-trading
+```
 
 ## Dependencies
 
-The project requires the following dependencies, specified in the `requirements.txt` file:
+`open-trading` will always try to reduce dependencies to the extreme minimum. The current dependencies are specified in 
+the `requirements.txt` file::
 
-- **Polars**: dataframes powered by a multithreaded, vectorized query engine, written in Rust.
+- **Polars**: Blazingly fast DataFrames in Rust, Python, Node.js, R, and SQL
 - **PyZMQ**: Python bindings for ZeroMQ, a high-performance asynchronous messaging library.
 - **python-telegram-bot**: a library to build Telegram bots.
 
