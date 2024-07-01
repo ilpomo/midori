@@ -58,7 +58,7 @@ control interface:
   - Parallelism through multi-processing for CPU bound tasks
   - Concurrency based on multi-threading for I/O bound tasks
   - Concurrency based on Asyncio for network-related tasks
-  - [ZeroMQ](https://github.com/zeromq/pyzmq) asynchronous PUB/SUB IPC/INPROC sockets
+  - Asynchronous [ZeroMQ](https://github.com/zeromq/pyzmq) PUB/SUB IPC/INPROC sockets
 - Custom database-like class based on [Polars](https://github.com/pola-rs/polars/)
   - Flat files in Apache Parquet format
   - No need to learn SQL
